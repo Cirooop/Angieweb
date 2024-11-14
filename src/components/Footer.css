@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Quicksand:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+
+.caja-footer .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d8dbc7;
+  color: #050505;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.caja-footer .footer .info-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 450px;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 8px;
+}
+
+.caja-footer .footer .info {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.caja-footer .footer .info p {
+  margin-left: 15px;
+  margin-right: 15px;
+  font-weight: 400;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.caja-footer .footer .info .divider {
+  height: 15px;
+  width: 1.5px;
+  background-color: #000000;
+  margin: 0 10px;
+}
+
+.caja-footer .footer .info p:hover {
+  color: #dfc05d;
+  cursor: pointer;
+}
+
+.caja-footer .footer .social {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.caja-footer .footer .social-icon {
+  color: #000000;
+  margin: 0 8px;
+  font-size: 24px; 
+  transition: color 0.3s;
+}
+
+.caja-footer .footer .social-icon:hover {
+  color: #dfc05d;
+}
+
+.caja-footer .rights {
+  text-align: center;
+  background-color: #91873162;
+  padding: 5px;
+  margin-top: 5px;
+  color: #000000;
+  font-size: 12px;
+}

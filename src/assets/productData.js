@@ -1,53 +1,37 @@
-import laptop from '../assets/productsimg/laptopgaming.jpg';
-import smartphone from '../assets/productsimg/xiaomi.jpg';
-import auriculares from '../assets/productsimg/aurisblue.jpg';
-import tablet from '../assets/productsimg/tablet.jpg';
-import reloj from '../assets/productsimg/reloj.jpg';
-import teclado from '../assets/productsimg/teclado.jpg';
-const productData =[
-    {
-      "id": 1,
-      "name": "Laptop Gaming XYZ",
-      "description": "Potente laptop para juegos con gráficos avanzados.",
-      "price": 1200,
-      "image": laptop
-    },
-    {
-      "id": 2,
-      "name": "Smartphone Xiaomi",
-      "description": "Smartphone con cámara de alta resolución y batería de larga duración.",
-      "price": 800,
-      "image": smartphone
-    },
-    {
-      "id": 3,
-      "name": "Auriculares Bluetooth 123",
-      "description": "Auriculares inalámbricos con cancelación de ruido.",
-      "price": 150,
-      "image": auriculares
-    },
-    {
-      "id": 4,
-      "name": "Tablet Ultra HD",
-      "description": "Tableta de alta definición ideal para el entretenimiento.",
-      "price": 500,
-      "image": tablet
-    },
-    {
-      "id": 5,
-      "name": "Reloj Inteligente DEF",
-      "description": "Reloj inteligente con monitor de salud y notificaciones.",
-      "price": 300,
-      "image": reloj
-    },
-    {
-      "id": 6,
-      "name": "Teclado Mecánico RGB",
-      "description": "Teclado mecánico con retroiluminación RGB.",
-      "price": 100,
-      "image": teclado
-    }
-  ]
-  
+import producto1 from '../assets/productsimg/fondo1.jpeg';
+// import producto2 from '../assets/productsimg/producto2.jpeg';
+// import producto3 from '../assets/productsimg/producto3.jpeg';
+// import producto4 from '../assets/productsimg/producto4.jpeg';
 
-  export default productData
+const productData = [
+  {
+    "id": 1,
+    "name": "Set de Brochas Profesionales",
+    "description": "Conjunto de brochas de alta calidad para un maquillaje impecable.",
+    "price": 50,
+    "image": producto1
+  },
+  // {
+  //   "id": 2,
+  //   "name": "Paleta de Sombras",
+  //   "description": "Paleta de sombras con una variedad de colores para cualquier ocasión.",
+  //   "price": 30,
+  //   "image": producto2
+  // },
+  // {
+  //   "id": 3,
+  //   "name": "Crema Hidratante Facial",
+  //   "description": "Crema hidratante para una piel suave y radiante.",
+  //   "price": 20,
+  //   "image": producto3
+  // },
+  // {
+  //   "id": 4,
+  //   "name": "Esmalte de Uñas",
+  //   "description": "Esmalte de uñas de larga duración disponible en varios colores.",
+  //   "price": 10,
+  //   "image": producto4
+  // }
+];
+
+export default productData;

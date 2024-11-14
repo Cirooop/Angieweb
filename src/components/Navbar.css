@@ -1,92 +1,197 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Quicksand:wght@300..700&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&family=Quicksand:wght@300..700&display=swap');
+
+* {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-
-.header{
+/* Estilo del top header */
+.header .topheader {
   width: 100%;
-  position: relative;
-}
-
- .header .top_header {
-  max-width: 100%;
+  height: 40px;
+  background-color: #e1ee6870;
   display: flex;
-  padding: 3px 10px;
-  background-color: #eeeeeee1;
+  align-items: center;
+  justify-content: center;
 }
 
-.header .top_header .icon {
-  margin-left: 20px;
-  color: #ababab;
-  font-size: 15px;
+.header .topheader p {
+  font-weight: 400;
+  opacity: 0.6;
+  margin-right: 10px;
+  padding: 10px;
+  text-align: center;
 }
 
-.header .top_header .info p {
-  margin-left: 10px;
-  color: #8a8a8a;
-  font-size: 15px;
+.header .topheader .iconship {
+  display: inline-block;
+  margin-left: -10px;
+  margin-top: 8px;
 }
+
+/* Header Principal */
 .header .last_header {
   width: 100%;
-  padding: 10px 10px;
+  height: 70px;
   display: flex;
-  background:#232323;
-  justify-content: space-between;
+  align-items: center;
+  background: #d8dbc7;
 }
+
+.last_header .space {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-right: 8px;
+  margin-left: 15px;
+}
+
+.last_header .space .menulinea {
+  display: flex;
+  font-size: 25px;
+  cursor: pointer;
+}
+
 .last_header .nav {
   width: 100%;
-  margin-top: 5px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .last_header .nav .menu {
   display: flex;
   justify-content: center;
-  flex-grow: 1;
 }
 
 .last_header .nav .menu li {
   list-style: none;
-  margin: 0 15px; 
+  margin: 0 -15px;
 }
 
-.last_header .nav .user {
+.last_header .nav .logo img {
+  margin-top: 12px;
+  max-height: 150px;
+  transition: 0.5s;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.last_header .nav .logo img:hover {
+  max-height: 170px;
+  cursor: pointer;
+  /* background-color: #2f3e462a; */
+}
+
+/* Botón de usuario */
+.last_header .user {
+  width: 33%;
   display: flex;
   align-items: center;
-  color: #fff;
+  justify-content: end;
+  height: 40px;
+  padding: 3px 8px;
+  margin: 15px;
+  color: #414141;
+  border: none;
+  border-radius: 10px;
 }
 
-.last_header .nav .user .icon {
-  margin-right: 10px;
+.last_header .user .icon {
+  margin-top: 6px;
+  margin-right: 5px;
+  transition: 0.2s;
 }
 
-.last_header .nav .user .btn button {
-  color: #fff;
+.last_header .user .btn button {
+  color: #414141;
   border: none;
   font-size: 16px;
+  font-weight: 600;
   background: none;
   cursor: pointer;
-  margin-bottom: 3px;
+  transition: 0.2s;
 }
 
-.last_header .nav .user .btn button .link{
-  text-decoration: none;
-  color: #fff;
+.last_header .user .btn button:hover {
+  color: rgba(68, 68, 68, 0.6);
 }
 
+/* Estilos para enlaces del menú */
 .header .last_header .nav ul li .link {
+  font-style: italic;
+  position: relative;
   margin-right: 20px;
   text-decoration: none;
-  color: #fff;
+  color: #414141;
   font-weight: 600;
   transition: 0.5s;
 }
+
+.header .last_header .nav ul li .link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: rgba(68, 68, 68, 0.6);
+  opacity: 0.5;
+  transition: width 0.5s ease;
+}
+
 .header .last_header .nav ul li .link:hover {
-  color: #fed700;
+  color: rgba(68, 68, 68, 0.6);
+}
+
+.header .last_header .nav ul li .link:hover::after {
+  width: 105%;
+}
+
+/* Estilos responsivos para móviles */
+@media (max-width: 768px) {
+  .header .topheader {
+    font-size: 0.8em;
+    height: 35px;
+  }
+
+  .header .topheader .iconship {
+    margin-top: 6px;
+  }
+
+  .last_header {
+    height: auto;
+  }
+
+  .last_header .space {
+    width: 33%;
+  }
+
+  .last_header .nav {
+    font-size: 0.9em;
+  }
+
+  .last_header .nav .menu {
+    display: none;
+  }
+
+  .last_header .user {
+    margin-bottom: 15px;
+    padding: 8px;
+  }
+
+  .last_header .user .btn button {
+    display: none;
+  }
+
+  .header .last_header .nav ul li {
+    margin: 5px 0;
+  }
+
+  .header .last_header .nav ul li .link {
+    font-size: 0.9em;
+  }
 }

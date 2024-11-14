@@ -1,0 +1,115 @@
+/* Primera sección: Bienvenida */
+.bienvenida {
+  position: relative;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../assets/productsimg/fondo1.jpeg'); /* Imagen de fondo */
+  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Efecto parallax */
+  color: white;
+  text-align: center;
+}
+  .bienvenida-container {
+    background: transparent; /* Fondo semitransparente */
+  }
+  
+  .logohome {
+    width: 500px;
+    margin-bottom: 10px;
+    object-fit: contain;
+    
+  }
+
+  .bienvenida-container h1 {
+    position: relative;
+    top: -200px;
+    color: #333;
+  }
+  
+  .bienvenida-btn {
+    position: relative;
+    top: -150px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* Segunda sección: Cards de productos */
+  .products-section {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+  }
+  
+  .product-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-info {
+    padding: 15px;
+  }
+  
+  .product-name {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .product-price {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Tercera sección: Producto destacado */
+  .featured-section {
+    width: 100%;
+    padding: 40px 20px;
+    background: #f4f4f4;
+    text-align: center;
+  }
+  
+  .featured-product {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .featured-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .featured-info h3 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .featured-price {
+    font-weight: bold;
+    color: #666;
+    font-size: 20px;
+  }
+  
