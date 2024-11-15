@@ -31,7 +31,7 @@ const Home = () => {
       <section className="bienvenida">
         <div className="bienvenida-container">
           <img 
-            src="/assets/imggeneral/letraslogo2.png" // Asegúrate de que la ruta es correcta, comenzando desde la raíz
+            src="src\assets\imggeneral\letraslogo2.png" // Asegúrate de que la ruta es correcta, comenzando desde la raíz
             alt="Logo" 
             className="logohome" 
           />
@@ -51,7 +51,7 @@ const Home = () => {
           {products.slice(0, 4).map((product) => (
             <div key={product.id} className="product-card">
               <img 
-                src={product.image} 
+                src={`/assets/imgproducts/${product.image}`}  
                 alt={product.name} 
                 className="product-image" 
               />
