@@ -51,7 +51,7 @@ const Home = () => {
           {products.slice(0, 4).map((product) => (
             <div key={product.id} className="product-card">
               <img 
-                src={`/assets/imgproducts/${product.image}`}  
+                src={`../assets/imgproducts/${product.image}`}  
                 alt={product.name} 
                 className="product-image" 
               />
@@ -72,7 +72,7 @@ const Home = () => {
           <h2>Nuevo Producto Destacado</h2>
           {/* Imagen destacada */}
           <img 
-            src={products.length > 0 ? products[0].image : '/assets/img/default.jpg'} // Usamos un valor predeterminado si no hay productos
+            src={products.length > 0 ? products[0].image : 'src/assets/imggeneral/Newproduct.png'} // Usamos un valor predeterminado si no hay productos
             alt={products.length > 0 ? products[0].name : 'Producto Destacado'}
             className="featured-image" 
           />
