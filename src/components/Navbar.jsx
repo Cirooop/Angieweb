@@ -30,7 +30,7 @@ function Navbar() {
                   <li><NavLink to='/new' className='link'>New</NavLink></li>
                 </ul>
                 <div className="logo">
-                  <NavLink to='/'><img src="src\assets\imggeneral\logo3.png" alt="" /></NavLink>
+                  <NavLink to='/'><img src="src\assets\imggeneral\logo4.png" alt="" /></NavLink>
                 </div>
                 <ul className="menu">
                   <li><NavLink to='/offers' className='link'>Offers</NavLink></li>

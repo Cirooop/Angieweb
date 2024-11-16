@@ -1,7 +1,7 @@
 import './Home.css';
 import { useState, useEffect } from 'react';
 import { collection, getDocs } from "firebase/firestore";
-import {db} from "../firebase.js"; // Ya importas correctamente Firebase
+import {db} from "../firebase.js"; 
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -14,24 +14,25 @@ const Home = () => {
         const productsCollection = collection(dataBase, "products");
         const productsSnapShot = await getDocs(productsCollection);
         const productList = productsSnapShot.docs.map(doc => ({
-          id: doc.id, // Usamos el id de Firestore
+          id: doc.id, 
           ...doc.data()
         }));
-        setProducts(productList); // Actualizamos el estado con los productos
+        setProducts(productList); 
       } catch (error) {
-        console.error("Error fetching products:", error); // Captura cualquier error
+        console.error("Error fetching products:", error); 
       }
     };
     fetchProducts();
-  }, []); // Solo se ejecuta una vez al cargar el componente
+  }, []); 
 
   return (
     <>
       {/* Primera Sección: Bienvenida con logo y botón */}
+
       <section className="bienvenida">
         <div className="bienvenida-container">
           <img 
-            src="src\assets\imggeneral\letraslogo2.png" // Asegúrate de que la ruta es correcta, comenzando desde la raíz
+            src="src\assets\imggeneral\letraslogo3.png" // Asegúrate de que la ruta es correcta, comenzando desde la raíz
             alt="Logo" 
             className="logohome" 
           />
@@ -46,43 +47,50 @@ const Home = () => {
       </section>
 
       {/* Segunda Sección: Cards de productos */}
+
       <section className="products-section">
         <div className="products-container">
           {products.slice(0, 4).map((product) => (
             <div key={product.id} className="product-card">
-              <img 
-                src={`../assets/imgproducts/${product.image}`}  
-                alt={product.name} 
-                className="product-image" 
-              />
-              <div className="product-info">
-                <h2 className="product-name">{product.name}</h2>
-                <p className="product-description">{product.description}</p>
-                <p className="product-price">${product.price}</p>
-                <p className="product-sku">SKU: {product.sku}</p>
-              </div>
+
+                <div className="imgp">
+                  <img 
+                    src={product.image} 
+                    alt={product.name} 
+                    className="product-image" 
+                    />
+                </div>
+
+                <div className='containername'>
+                  <p className="product-name">{product.name}</p>
+                </div>
+
+                  <p className="product-price">$ {product.price}</p>
+                  <button className="add-to-cart-btn">Agregar al carrito</button>
+
             </div>
           ))}
         </div>
       </section>
 
-      {/* Tercera Sección: Producto destacado */}
+      {/* Sección de producto destacado */}
+
       <section className="featured-section">
         <div className="featured-product">
+
           <h2>Nuevo Producto Destacado</h2>
-          {/* Imagen destacada */}
           <img 
-            src={products.length > 0 ? products[0].image : 'src/assets/imggeneral/Newproduct.png'} // Usamos un valor predeterminado si no hay productos
-            alt={products.length > 0 ? products[0].name : 'Producto Destacado'}
+            src="src/assets/imggeneral/Newproduct.png" 
+            alt="Producto Destacado"
             className="featured-image" 
           />
           <div className="featured-info">
-            <h3>{products.length > 0 ? products[0].name : 'Producto Desconocido'}</h3>
-            <p>{products.length > 0 ? products[0].description : 'Descripción del producto'}</p>
-            <p className="featured-price">${products.length > 0 ? products[0].price : '0.00'}</p>
+            <p>¡Conocé la nueva máquina de depilación láser de diodo 2024! Un dispositivo profesional de depilación con 3 longitudes de onda para resultados efectivos y duraderos. Diseño elegante en negro, ideal para todo tipo de piel.</p>
           </div>
+          
         </div>
       </section>
+
     </>
   );
 };
