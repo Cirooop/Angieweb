@@ -32,7 +32,7 @@ const Home = () => {
       <section className="bienvenida">
         <div className="bienvenida-container">
           <img 
-            src="src\assets\imggeneral\letraslogo3.png" // Asegúrate de que la ruta es correcta, comenzando desde la raíz
+            src="..\assets\imggeneral\letraslogo3.png" // Asegúrate de que la ruta es correcta, comenzando desde la raíz
             alt="Logo" 
             className="logohome" 
           />
@@ -80,7 +80,7 @@ const Home = () => {
 
           <h2>Nuevo Producto Destacado</h2>
           <img 
-            src="src/assets/imggeneral/Newproduct.png" 
+            src="../assets/imggeneral/Newproduct.png" 
             alt="Producto Destacado"
             className="featured-image" 
           />
