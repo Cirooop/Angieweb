@@ -1,0 +1,125 @@
+/* Contenedor principal de la página para centrar todo */
+.page-container {
+    display: grid;
+    place-items: center; /* Centra el contenido tanto vertical como horizontal */
+    height: 100vh; /* Ocupa todo el alto de la ventana */
+    background-color: #f4f4f4; /* Puedes cambiar el color de fondo si lo deseas */
+}
+
+/* Contenedor principal de los detalles del producto */
+.product-details1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    justify-items: center;
+    padding: 120px;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Imagen del producto */
+.product-image1 {
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de información del producto */
+.product-info1 {
+    max-width: 600px;
+}
+
+/* Título del producto */
+.product-info1 h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Descripción del producto */
+.product-info1 p.description1 {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+/* Precio del producto */
+.product-info1 p.price1 {
+    font-size: 1.6rem;
+    color: #27ae60;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Botón de agregar al carrito */
+.add-to-cart-btn1 {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-to-cart-btn1:hover {
+    background-color: #c0392b;
+}
+
+/* Enlace para regresar */
+.back-link1 {
+    font-size: 1rem;
+    color: #3498db;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+}
+
+.back-link1:hover {
+    color: #2980b9;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .product-details1 {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        padding: 15px;
+    }
+
+    .product-image1 {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .product-info1 {
+        max-width: 100%;
+    }
+
+    .product-info1 h2 {
+        font-size: 1.5rem;
+    }
+
+    .product-info1 p.price1 {
+        font-size: 1.3rem;
+    }
+
+    .add-to-cart-btn1 {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
