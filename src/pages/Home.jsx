@@ -1,92 +1,41 @@
 import './Home.css';
-import { useState, useEffect } from 'react';
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "../firebase.js"; 
-import { useNavigate } from 'react-router-dom'; // Importamos useNavigate
+import { NavLink } from 'react-router-dom';
+
+
 
 const Home = () => {
-  const [products, setProducts] = useState([]);
-  const dataBase = db;
-  const navigate = useNavigate(); // Creamos una instancia de useNavigate
-
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  // Este useEffect es para obtener los productos de Firestore
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const productsCollection = collection(dataBase, "products");
-        const productsSnapShot = await getDocs(productsCollection);
-        const productList = productsSnapShot.docs.map(doc => ({
-          id: doc.id, 
-          ...doc.data()
-        }));
-        setProducts(productList); 
-      } catch (error) {
-        console.error("Error fetching products:", error); 
-      }
-    };
-    fetchProducts();
-  }, []); 
 
   return (
     <>
+      {/* Primera Sección: Bienvenida*/}        
+
       <section className="bienvenida">
         <div className="bienvenida-container">
           <img 
             src="https://i.imgur.com/Jta8nRF.png"
             alt="Logo" 
-            className="logohome" 
-          />
+            className="logohome"/>
           <h1>Bienvenidos a Nuestra Tienda</h1>
-          <button 
-            className="bienvenida-btn" 
-            onClick={() => scrollToSection('section2')}
-          >
-            Comprar
-        </button>
-        </div>
-      </section>
-
-      <div className="separador1"></div>
-
-      {/* Segunda Sección: Cards de productos */}
-      <section className="section2" id='section2'>
-        <div className="titulo2">
-          <h2>Productos Destacados</h2>
-          <p>Explore nuestra selección de productos destacados</p>
-        </div>
-        <div className="products-section">
-          <div className="products-container">
-            {products.slice(0, 4).map((product) => (
-              <div 
-                key={product.id} 
-                className="product-card"
-                onClick={() => navigate(`/products/${product.id}`)} // Redirige a la página de detalles
-                style={{ cursor: 'pointer' }} // Añadimos cursor para indicar interactividad
-              >
-                <div className="imgp">
-                  <img 
-                    src={product.image} 
-                    alt={product.name} 
-                    className="product-image" 
-                  />
-                </div>
-                <div className='containername'>
-                  <p className="product-name">{product.name}</p>
-                </div>
-                <p className="product-price">$ {product.price}</p>
-                <button className="add-to-cart-btn">Agregar al carrito</button>
-              </div>
-            ))}
+          <NavLink to='/productos'>
+            <button className="bienvenida-btn" >Comprar</button>
+          </NavLink>
+          <div className="contenedor-sobre-nosotros">
+          <div className="titulo-sobre-nosotros">
+            <h2>Sobre nosotros</h2>
+            <p>
+              En Angie, creemos en realzar la belleza única de cada persona. Nos
+              especializamos en ofrecer productos de alta calidad diseñados para
+              resaltar lo mejor de ti, desde tratamientos faciales hasta soluciones
+              de cuidado personal. Nuestra misión es brindar una experiencia de
+              compra sencilla, segura y personalizada, para que encuentres exactamente
+              lo que necesitas para verte y sentirte increíble.
+            </p>
           </div>
         </div>
+        </div>
+        
       </section>
+
     </>
   );
 };

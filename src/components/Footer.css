@@ -9,11 +9,12 @@
 
 
 .caja-footer .footer {
+  border-top: 4px solid rgba(218, 171, 171, 0.199);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #d8dbc7;
+  background-color: #c4bdc579;
   color: #050505;
   padding: 10px;
   font-size: 14px;
@@ -51,7 +52,7 @@
 }
 
 .caja-footer .footer .info p:hover {
-  color: #dfc05d;
+  color: #686960;
   cursor: pointer;
 }
 
@@ -69,12 +70,14 @@
 }
 
 .caja-footer .footer .social-icon:hover {
-  color: #dfc05d;
+  color: #686960;
+
 }
 
 .caja-footer .rights {
   text-align: center;
-  background-color: #91873162;
+  background-color: #c4bdc5;
+
   padding: 5px;
   /* margin-top: 1px; */
   color: #000000;

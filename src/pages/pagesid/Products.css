@@ -1,125 +1,133 @@
-/* Contenedor principal de la página para centrar todo */
 .page-container {
     display: grid;
-    place-items: center; /* Centra el contenido tanto vertical como horizontal */
-    height: 100vh; /* Ocupa todo el alto de la ventana */
-    background-color: #f4f4f4; /* Puedes cambiar el color de fondo si lo deseas */
+    place-items: center;
+    min-height: 100vh;
+    background-color: rgba(247, 228, 224, 0.3);
 }
-
-/* Contenedor principal de los detalles del producto */
 .product-details1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 40px;
     justify-items: center;
-    padding: 120px;
-    max-width: 1200px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
-    color: #333;
+    padding: 60px;
+    max-width: 1400px;
+    max-height: 800px;
+    background-color: rgb(226, 226, 226);
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #1a1f2c;
 }
-
-/* Imagen del producto */
 .product-image1 {
-    max-width: 500px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    max-height:500px;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
 }
-
-/* Contenedor de información del producto */
+.product-image1:hover {
+    transform: scale(1.02);
+}
 .product-info1 {
     max-width: 600px;
+    padding: 20px;
 }
-
-/* Título del producto */
 .product-info1 h2 {
-    font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-/* Descripción del producto */
-.product-info1 p.description1 {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #7f8c8d;
+    font-size: 2.5rem;
+    color: #1a1f2c;
     margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
 }
-
-/* Precio del producto */
+.product-info1 p.description1 {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: #4a5568;
+    margin-bottom: 30px;
+}
 .product-info1 p.price1 {
-    font-size: 1.6rem;
-    color: #27ae60;
-    font-weight: bold;
-    margin-bottom: 25px;
+    margin-left: 15px;
+    font-size: 2rem;
+    color: #a0a0db;
+    font-weight: 700;
+    margin-bottom: 35px;
 }
-
-/* Botón de agregar al carrito */
 .add-to-cart-btn1 {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    max-width: 250px;
-    padding: 12px 20px;
-    font-size: 1.1rem;
-    color: #fff;
-    background-color: #e74c3c;
+    max-width: 300px;
+    padding: 16px 24px;
+    font-size: 1.125rem;
+    color: white;
+    background-color: #a0a0db;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    box-shadow: 0 10px 15px -3px rgba(155, 135, 245, 0.3);
 }
-
 .add-to-cart-btn1:hover {
-    background-color: #c0392b;
+    background-color: #8b74f2;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 20px -3px rgba(155, 135, 245, 0.4);
 }
-
-/* Enlace para regresar */
 .back-link1 {
-    font-size: 1rem;
-    color: #3498db;
+    font-size: 1.125rem;
+    color: #9b87f5;
     text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
-    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
-
 .back-link1:hover {
-    color: #2980b9;
+    color: #8b74f2;
+    transform: translateX(-4px);
 }
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .product-details1 {
-        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
-        padding: 15px;
+        grid-template-columns: 1fr;
+        padding: 30px;
+        margin: 20px;
     }
-
     .product-image1 {
         max-width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
-
     .product-info1 {
         max-width: 100%;
+        padding: 0;
     }
-
     .product-info1 h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
-
     .product-info1 p.price1 {
-        font-size: 1.3rem;
+        font-size: 1.75rem;
     }
-
     .add-to-cart-btn1 {
         width: 100%;
+        max-width: none;
+    }
+}
+@media (max-width: 640px) {
+    .product-details1 {
+        padding: 20px;
+        margin: 16px;
+    }
+    .product-info1 h2 {
+        font-size: 1.75rem;
+    }
+    .product-info1 p.description1 {
         font-size: 1rem;
+    }
+    .product-info1 p.price1 {
+        font-size: 1.5rem;
     }
 }

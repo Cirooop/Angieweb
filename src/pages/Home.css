@@ -1,11 +1,9 @@
-/* -------- Primera sección: Bienvenida -------*/
+/* -------- Primera sección: Bienvenida ------- */
 @import url('https://fonts.googleapis.com/css2?family=Delius&family=Poppins:wght@400;600;700&family=Quicksand:wght@300..700&display=swap');
-
-
 
 .bienvenida {
   position: relative;
-  height: 100vh;
+  height: 141vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +14,8 @@
   color: white;
   text-align: center;
   transition: all 0.3s ease;
-  animation: fadeUp 0.5s ease-out;
+  
+  
 }
 
 .bienvenida-container {
@@ -30,7 +29,6 @@
 }
 
 .bienvenida-container h1 {
-  /* font-family: "Delius"; */
   position: relative;
   font-weight: 300;
   font-size: 40px;
@@ -39,262 +37,81 @@
 }
 
 .bienvenida-btn {
-  /* font-family: "Delius"; */
   position: relative;
   top: -150px;
-  padding: 10px 20px;
+  padding: 14px 40px;
   font-size: 16px;
-  color: #000000c7;
+  color: #ffffffc7;
   font-weight: 500;
-  border: none;
-  background-color: #ffffff54;
-  border: 1px solid rgba(0, 0, 0, 0.103);
-  /* border-radius: 5px; */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  background-color: #ffbcbc; 
+  border: 2px dashed #ffbcbc;
   cursor: pointer;
   margin-top: 10px;
-  transition: 0.3s ease;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.11);
+  transition: .3s ease;
 }
+
 .bienvenida-btn:hover {
   transform: translateY(-3px);
-  background-color: #dd81c1fb;
-  color:white;
+  background-color: #ffffff54;
+  border: 2px dashed #dd81c163;
+  color: #ffbcbc;
+}
+.bienvenida-btn:active {
+  background-color: #ffbcbc86; 
 }
 
-
-
-
-.titulo2 {
-  display: inline-block;  /* Flexbox para centrar el título */
-  justify-content: center;  /* Centra horizontalmente */
-  align-items: center;  /* Centra verticalmente si es necesario */
+/* -------- Segunda sección: Sobre Nosotros -------- */
+/* Contenedor general de la sección */
+.sobre-nosotros-seccion {
   width: 100%;
-  position: relative;  /* Esto permite mover el título con respecto a su posición original */
-}
-
-.titulo2 h2 {
-  margin-top: 35px;
-  margin-bottom: 1rem;
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: #1f2937;
-  background-color:transparent;
-  padding: 10px 20px;
-  text-align: center;
-  position: relative; 
-  /* top: -75px; */
-  /* border-radius: 8px; */
-  /* box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.075) */
-  ;}
-.titulo2 p {
-  text-align: center;
-  font-size: 1.125rem;
-    color: #4b5563;
-}
-
-/* ---------- Segunda sección: Cards ---------- */
-.section2 {
-  background-color: rgba(247, 228, 224, 0.3);
- 
-}
-.section2:hover {
-  display: block;
-}
-
-.products-section {
-  padding: 40px 0;
-  /* margin: 10px; */
   display: flex;
+  align-items: center;
   justify-content: center;
+  padding: 30px;
+  background-color: rgba(146, 142, 142, 0.247);
+
 }
 
-.products-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  max-width: 1400px;
-  margin-bottom: 50px;
-}
-
-.product-card {
-  position: relative;
-  width: 100%;
-  height: 370px; 
-  background: #ffffffc7;
-  /* border: 1px solid rgba(219, 219, 219, 0.192); */
-  border-radius: 8px;
+.contenedor-sobre-nosotros {
+  text-align: center;
+  width: 750px;
   display: flex;
-  flex-direction: column;
-  box-shadow: 0px 4px 6px rgba(153, 77, 77, 0.027);
-  transition: 0.3s ease;
-}
-
-
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 4px 6px rgba(153, 77, 77, 0.438);
-  cursor: pointer;
-}
-
-.product-card .imgp {
-  width: 100%;
-  cursor: pointer;
-  background-color: white;
-  border-radius: 8px;
-}
-
-.product-image {
-  width: 100%;
-  height: 250px; 
-  object-fit: contain;
-  /* border-radius: 8px; */
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-}
-
-
-.containername{
-  height: 80%;
-}
-/* Nombre del producto */
-.product-name {
-  width: 80%;
-  margin: 0 auto;
-  padding-top: 20px;
-  font-size: 15px;
-  font-weight: 400;
-  text-align: center;
-  line-height: 1.3;
-
-}
-
-.product-name:hover {
-  color:#dd81c1fb ;
-}
-
-/* Descripción del producto */
-.product-description {
-  font-size: 12px;
-  text-align: center;
-  
-}
-
-/* SKU del producto */
-.product-sku {
-  font-size: 12px;
-  color: #818181;
-  text-align: center;
-  font-weight: 300;
-}
-/* Precio del producto */
-.product-price {
-  padding: 5px;
-  background-color: #bdabab3d;
-  border-radius: 8px;
-  margin: 0 auto;
-  width: 80%;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 600;
-  color: #000000;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  font-family: "Delius";
-}
-
-/* Botón de agregar al carrito */
-.add-to-cart-btn {
-  padding: 10px 10px;
+  flex-direction: column; /* Para asegurar que los elementos se apilen verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
   background-color: #ffffff;
-  color: #000000c7;
-  border: 1px solid rgba(0, 0, 0, 0.185);
-  border-radius: 5px;
-  cursor: pointer;
-  display: block; 
-  font-family: "Poppins";
-  margin-bottom: 5px;
-  display: none;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.add-to-cart-btn:hover {
-  background-color: #dd81c1fb;
-  color:white;
-}
-
-
-
-
-/* -------  Tercera sección: Producto destacado  ---------- */ 
-
-
-.titulo3 {
-  display: flex;  /* Flexbox para centrar el título */
-  justify-content: center;  /* Centra horizontalmente */
-  align-items: center;  /* Centra verticalmente si es necesario */
-  width: 100%;
-  top: -85px;
-  position: relative;  /* Esto permite mover el título con respecto a su posición original */
-}
-
-.titulo3 h2 {
-  /* font-family: "Delius"; */
-  margin-top: 45px;  /* Puedes ajustar esto o eliminarlo si no lo necesitas */
-  font-weight: 600;
-  font-size: 1.8rem;
-  color: hwb(0 0% 100%);
-  background-color: #fdfdfd;
-  padding: 10px 20px;
-  text-align: center;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  position: relative;  /* Esto permite mover el título con respecto a su posición */
-  top: -20px;  /* Este valor mueve el título hacia arriba */
-}
-
-
-
-
-.featured-section {
-  display: inline;
-  width: 100%;
-  padding: 40px 20px;
-  background: #f4f4f4;
-  text-align: center;
-}
-
-.featured-product {
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-.featured-image {
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.featured-info p {
-  font-size: 16px;
-  color: #666;
-  line-height: 1.5;
-}
-
-.featured-info h3 {
-  font-size: 24px;
-  margin: 10px 0;
-}
-
-.featured-price {
+.titulo-sobre-nosotros h2 {
+  font-size: 2.5rem;
   font-weight: bold;
-  color: #666;
-  font-size: 20px;
+  color: #e7abab;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }}
+.titulo-sobre-nosotros h2::after {
+  content: '';
+  width: 50px;
+  height: 4px;
+  background-color: #e7abab;
+  display: block;
+  margin: 0.5rem auto 0;
+}
+
+.titulo-sobre-nosotros p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555555;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  text-align: justify;
+}

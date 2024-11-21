@@ -6,13 +6,14 @@
 .new-content-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
 }
 
 .new-header {
   margin-top: 35px;
   margin-bottom: 3rem;
   text-align: center;
+  letter-spacing: 2px;
 }
 
 .new-header h1 {
