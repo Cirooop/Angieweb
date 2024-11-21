@@ -54,7 +54,6 @@
   align-items: center;
   justify-content: end;
   padding-right: 8px;
-  /* margin-left: 15px; */
   visibility: hidden;
 }
 
@@ -93,7 +92,6 @@
 .last_header .nav .logo img:hover {
   max-height: 170px;
   cursor: pointer;
-  /* background-color: #2f3e462a; */
 }
 
 /* Botón de usuario */
@@ -129,15 +127,15 @@
   margin-left: 10px;
   color: black;
   text-decoration: none;
-  display: flex; /* Asegura que los elementos dentro estén alineados */
-  align-items: center; /* Centra verticalmente el contenido */
+  display: flex; 
+  align-items: center;
   gap: 45px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade un efecto suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
-/* Efecto hover para más interacción */
+
 .last_header .user .carrito:hover {
-  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+  transform: scale(1.1); 
 }
 .car-count {
   width: 15px;
@@ -157,9 +155,8 @@
   color: rgba(68, 68, 68, 0.6);
 }
 
-/* Estilos para enlaces del menú */
+
 .header .last_header .nav ul li .link {
-  /* font-style: italic; */
   position: relative;
   margin-right: 20px;
   text-decoration: none;
@@ -188,7 +185,6 @@
   width: 105%;
 }
 
-/* Estilos responsivos para móviles */
 @media (max-width: 768px) {
   .header .topheader {
     font-size: 0.8em;

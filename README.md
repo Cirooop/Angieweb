@@ -22,4 +22,10 @@ Este es un proyecto de e-commerce diseñado para vender productos de estética. 
 ## 📂 Instrucciones de Instalación
 1. Clona el repositorio desde GitHub:
    ```bash
-   git clone https://github.com/usuario/repositorio.git
+   git clone https://github.com/Cirooop/Angieweb
+
+## 📂 Tambien puede visualizarse por vercel 
+
+    https://angieweb-2gwyu7t0o-ciros-projects-40901759.vercel.app/
+
+

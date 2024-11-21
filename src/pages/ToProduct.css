@@ -1,9 +1,9 @@
 .seccion-productos {
-    padding: 8rem 0 9rem;  /* Ajusta el padding según sea necesario */
+    padding: 8rem 0 9rem;  
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente */
+    align-items: center; 
     background-color: rgba(247, 228, 224, 0.3);
 
 }
@@ -12,7 +12,7 @@
     font-size: 20px;
     letter-spacing: 2px;
     text-align: center;
-    margin-bottom: 2rem; /* Espacio entre el título y los productos */
+    margin-bottom: 2rem; 
 }
 .titulo-productos h2 {
     margin-bottom: 1rem;
@@ -39,10 +39,10 @@
     padding: 100px;
     background-color: rgb(226, 226, 226);
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-    gap: 20px; /* Espacio entre las tarjetas */
-    justify-items: center; /* Centra las tarjetas dentro de cada celda */
-    align-items: center; /* Alinea las tarjetas verticalmente */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+    justify-items: center; 
+    align-items: center; 
     margin-bottom: 50px;
     width: 100%;
 }
@@ -50,8 +50,8 @@
 .tarjeta-producto {
     align-items: center;
     position: relative;
-    width: 100%; /* Asegura que las tarjetas ocupen todo el espacio dentro de la celda */
-    max-width: 300px; /* Ajusta el tamaño máximo de las tarjetas */
+    width: 100%; 
+    max-width: 300px; 
     height: 370px;
     background: #ffffffc7;
     border-radius: 8px;

@@ -9,24 +9,24 @@ const New = () => {
   useEffect(() => {
     const fetchNewProducts = async () => {
       try {
-        // Accedemos a la colección 'newproducts' en Firestore
+        
         const productsCollection = collection(db, "newproducts"); 
         const productsSnapshot = await getDocs(productsCollection);
 
-        // Verificamos si el snapshot tiene productos
+        
         if (productsSnapshot.empty) {
           console.log("No se encontraron productos en la colección 'newproducts'");
           return;
         }
 
-        // Mapeamos los documentos obtenidos para extraer los campos necesarios
+       
         const productList = productsSnapshot.docs.map(doc => {
           const data = doc.data();
 
-          // Validamos que los campos 'name', 'image', y 'description' existan
-          const name = data.name || "Producto sin nombre"; // Valor por defecto si no existe
-          const image = data.image || ""; // Valor por defecto si no existe
-          const description = data.description || "Descripción no disponible"; // Valor por defecto si no existe
+          
+          const name = data.name || "Producto sin nombre"; 
+          const image = data.image || ""; 
+          const description = data.description || "Descripción no disponible"; 
 
           return {
             id: doc.id,
@@ -36,7 +36,7 @@ const New = () => {
           };
         });
 
-        console.log("Productos obtenidos:", productList); // Depuración para ver los datos
+        console.log("Productos obtenidos:", productList); 
 
         setNewProducts(productList); 
       } catch (error) {
@@ -56,27 +56,28 @@ const New = () => {
         </div>
 
         <div className="new-products-grid">
-          {/* Iteramos sobre los productos obtenidos de Firebase y los mostramos */}
+      
           {newProducts.map((newProduct) => (
             <div key={newProduct.id} className="new-product-card">
               <div className="new-image-container">
-                {/* Comprobamos si 'image' tiene un valor antes de intentar mostrarla */}
+
                 {newProduct.image ? (
                   <img
-                    src={newProduct.image} // Mostramos la imagen del producto
-                    alt={newProduct.name} // Usamos el nombre del producto para el alt
+                    src={newProduct.image} 
+                    alt={newProduct.name} 
                     className="new-product-image"
                   />
                 ) : (
-                  <p>Imagen no disponible</p> // Mensaje si la imagen no existe
+                  <p>Imagen no disponible</p> 
                 )}
               </div>
               <div className="new-product-info">
-                <p className="new-product-name">{newProduct.name}</p> {/* Mostramos el nombre */}
-                <p className="new-product-description">{newProduct.description}</p> {/* Descripción */}
+                <p className="new-product-name">{newProduct.name}</p> 
+                <p className="new-product-description">{newProduct.description}</p> 
               </div>
             </div>
           ))}
+          
         </div>
 
       </div>
